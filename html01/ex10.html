@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>html5 공부하기</title>
+    </head>
+
+    <body>
+        <h1>html5 공부</h1>
+        <h2>form 요소-select</h2>
+    <!--form 요소 공부하는법
+        기본으로 그리기 
+        input(text, password, radio, checkbox) 
+        select
+        textarea
+        button
+        데이터전송 name="", value="" 전송되도록
+        수정폼일때 원하는 값이 출력되도록 해야함-->
+    <!--form 요소로 감싸져야한다
+        버튼은 submit-> 전송이라는 특수기능-->                                  
+        <form action="" method="get">
+            <select name="telecom"> <!--name이랑value가 어디에 쓰여야하는지 알 것-->
+                <option>이동통신사를 선택해주세요</option>
+                <option value="sk" selected="selected">SKT</option>
+                <option value="kt">KT</option>
+                <option value="lg">LGU+</option>
+                <option value="etc">알뜰통신</option>
+            </select>
+            <br><br><br>
+            <input type="text">
+            <br>
+            <textarea name="content"></textarea>
+            <br><br>
+            <button type="submit">전송</button>
+
+        
+        </form>
+    
+    </body>
+    
+</html>
+
