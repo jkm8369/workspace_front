@@ -1,55 +1,43 @@
 <!DOCTYPE html>
-
-<html lang="ko"> <!-- 한국어문서만 검색할때, 음성으로 할때 한국어 음성지원 -->
+<html lang="ko">
     <head>
-        <meta charset="UTF-8"> <!-- 브라우저가 문서를 해석할때 필요한 정보 -->
-        <title>스타일시트</title>
-        <!-- 스타일시트자리 -->
+        <meta charset="UTF-8">
+        <title>Document</title>
         <style>
-            /*태그랑 css랑 같은 순서로,부모자식 관계 맞춰서 작성하는게 편하다*/
             table{
                 border-collapse: collapse;
                 text-align: center;
             }
-
             table>thead{
-                background-color: #d5d5d5;
-                border-top: 1px solid #000000;
-                border-bottom: 1px solid #000000;
+                background-color: #b5b5b5;
             }
 
-            /*
-            table>tr은 table 바로 밑 tr이니까 안됨
-            table tr{}로 해야됨 만약 할거면 그런데 구조가 헷갈리니까 다 표기해주는것이 좋다
-            */
-            table>thead>tr, table>tbody>tr{
-                height: 30px;
+            table>thead>tr{
+                border-top: 2px solid #000000;
+                border-bottom: 2px solid #000000;
             }
 
-            table>tbody>tr:hover{
-               background-color: #ffff00;
-            }
-            
-            tbody>tr>td{
-                border-bottom: 2px dotted #000000;
+            table>tbody>tr{
+                border-bottom: 2px dashed #000000;
             }
 
-            tbody>tr:last-child{
-                border-bottom: 2px solid gray;
+
+            table>tbody>tr:last-child{
+                border-bottom: 2px solid #000000;
             }
 
-            .txt-center{
-                text-align: center;
+            table>tbody>tr:nth-child(2n-1):hover{
+                background-color: aqua;
             }
-        
+
+            table>tbody>tr:nth-child(2n):hover{
+                background-color: beige;
+            }
+
         </style>
     </head>
 
     <body>
-        <h1>mysite</h1>
-        <h2>게시판</h2>
-        <h3>일반게시판</h3>
-        <h4>리스트</h4>
         <table>
             <colgroup>
                 <col style="width: 50px;">
@@ -74,7 +62,7 @@
             <tbody>
                 <tr>
                     <td>123</td>
-                    <td class="txt-center">
+                    <td>
                         <a href="">게시판 게시글입니다.</a>
                     </td>
                     <td>정우성</td>
@@ -84,7 +72,7 @@
                 </tr>
                 <tr>
                     <td>123</td>
-                    <td class="txt-center">
+                    <td>
                         <a href="">게시판 게시글입니다.</a>
                     </td>
                     <td>정우성</td>
@@ -94,7 +82,7 @@
                 </tr>
                 <tr>
                     <td>123</td>
-                    <td class="txt-center">
+                    <td>
                         <a href="">게시판 게시글입니다.</a>
                     </td>
                     <td>정우성</td>
@@ -104,7 +92,7 @@
                 </tr>
                 <tr>
                     <td>123</td>
-                    <td class="txt-center">
+                    <td>
                         <a href="">게시판 게시글입니다.</a>
                     </td>
                     <td>정우성</td>
@@ -114,7 +102,7 @@
                 </tr>
                 <tr>
                     <td>123</td>
-                    <td class="txt-center">
+                    <td>
                         <a href="">게시판 게시글입니다.</a>
                     </td>
                     <td>정우성</td>
@@ -125,16 +113,11 @@
 
             </tbody>
 
+          
 
+
+            
         </table>
-        
 
     </body>
-
 </html>
-
-       
-
-        
-
-
