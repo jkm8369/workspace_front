@@ -25,6 +25,17 @@ body{
     padding-bottom: 10px;
 }
 
+/* 빵부스러기 */
+ol>li{
+    list-style-type: none;
+    float: left;
+}
+
+ol>li::after{
+    content: ">";
+    padding-right: 5px;
+}
+
 /* 공통요소 */
 .form-group{
     border-bottom: 1px solid #000000;
@@ -32,11 +43,20 @@ body{
     padding-bottom: 10px;
 }
 
+
+    
+
+
 .form-title{
     display: inline-block;
     width: 120px;
     text-align: center;
     font-size: 12px;
+    border: 1px solid #000000;
+}
+
+.form-title:last-child{
+    
 }
 
 /* 주소 */
@@ -71,7 +91,16 @@ body{
 /* 자기소개 */
 .form-group textarea{
     width: 400px;
-    height: 100px;
+    height: 90px;
 }
 
+/* 버튼그룹 */
+.btn-group{
+    padding: 0px 0px 10px 0px;
+    text-align: center;
+}
 
+.btn-group button{
+    width: 60px;
+    height: 30px;
+}
