@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+body{
+    background-color: #808080;
+    font-family: "맑은 고딕";
+    font-size: 12px;
+}
+
+.wrap{
+    background-color: #ffffff;
+    width: 600px;
+    border: 1px solid #000000;
+}
+
+.wrap h3{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.clearfix::before, .clearfix::after{
+    display: block;
+    content: "";
+    line-height: 0;
+}
+
+.clearfix::after{
+    clear: both;
+}
+
+
+.wrap ol{
+    list-style-type: none;
+    margin: 10px 0px 10px 0px;
+}
+
+.wrap ol>li{
+    float: left;
+}
+
+.wrap ol>li::after{
+    content: ">";
+}
+
+.wrap ol>li:last-child::after{
+    content: "";
+}
+
+.form-group{
+    border: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    padding: 0px 0px 10px 0px;
+}
+
+.form-group .form-title{
+    display: inline-block;
+    border: 1px solid #000000;
+    width: 120px;
+}

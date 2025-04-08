@@ -12,6 +12,13 @@ p, table, th, td, tr{
     margin: 0; padding: 0;
 }
 
+/* inherit -> 부모의 속성을 가진다 */
+input, select, textarea{
+    font-family: inherit;
+    font-size: inherit;
+}
+
+
 body{
     background-color: #808080;
     font-family: "맑은 고딕";
@@ -38,9 +45,10 @@ body{
     margin: 0px 0px 10px 0px;
 }
 
-.form-title{
+.form-group .form-title{
     display: inline-block;
     width: 80px;
+    vertical-align: top;
 }
 
 /* 게시판선택 */
@@ -66,9 +74,10 @@ body{
 
 /* 글 내용 */
 .form-group textarea{
-    width: 685px;
+    width: 500px;
     height: 70px;
 }
+
 
 /* 첨부파일 */
 
@@ -86,3 +95,13 @@ body{
 }
 
 /* ---------폼에서 쓰이는 애들은 대부분 인라인블럭---------- */
+
+ol{
+    background-color: red;
+    list-style-type: none;
+}
+
+ol>li{
+    border: 1px solid #000000;
+    float: left;
+}

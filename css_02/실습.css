@@ -7,6 +7,12 @@ p, table, th, td, tr{
     margin: 0; padding: 0;
 }
 
+/* 폼 폰트통일 */
+input, select, textarea{
+    font-family: "맑은 고딕";
+    font-size: 15px;
+}
+
 body{
     background-color: #808080;
     font-family: "맑은 고딕";
@@ -25,16 +31,46 @@ body{
     padding-bottom: 10px;
 }
 
+/* 폼 폰트통일 */
+
+
+
+
+
 /* 빵부스러기 */
-ol>li{
+
+/* clearfix */
+/* .clearfix{*zoom:1;} ->익스플로어에 적용 */
+.clearfix::before, .clearfix::after{
+    display: block;
+    content: "";
+    line-height: 0;
+}
+
+.clearfix::after{
+    clear: both;
+}
+
+
+/* 경로표시 */
+.wrap ol{
     list-style-type: none;
+    margin: 10px 0px 20px 0px;
+}
+
+
+.wrap ol>li{
     float: left;
 }
 
-ol>li::after{
+.wrap ol>li::after{
     content: ">";
-    padding-right: 5px;
 }
+
+.wrap ol>li:last-child::after{
+    content: "";
+}
+
 
 /* 공통요소 */
 .form-group{
@@ -44,22 +80,21 @@ ol>li::after{
 }
 
 
-    
-
-
-.form-title{
-    display: inline-block;
-    width: 120px;
-    text-align: center;
-    font-size: 12px;
-    border: 1px solid #000000;
+.form-group .form-title{
+display: inline-block;
+width: 120px;
+text-align: center;
+font-size: 12px;
 }
 
-.form-title:last-child{
-    
-}
+
+
 
 /* 주소 */
+
+/* 주소영역 2줄표현
+<br> 아래는 마진으로 해결 */
+
 #txt-address{
     width: 180px;
 }
@@ -74,11 +109,11 @@ ol>li::after{
     padding: 0px 5px 0px 5px;
 }
 
-.txt-address2{
-    display: inline-block;
+#txt-address2{
     border: 1px solid #000000;
-    width: 400px;
+    width: 370px;
     margin-left: 124px;
+    margin-top: 5px;
 }
 
 /* 나이 */
@@ -87,11 +122,24 @@ ol>li::after{
     margin: 0px 5px 0px 0px;
 }
 
+.form-group label{
+    font-family: "맑은 고딕";
+    font-size: 15px;
+ }
+
 
 /* 자기소개 */
 .form-group textarea{
     width: 400px;
     height: 90px;
+}
+
+.form-title2{
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    font-size: 12px;
+    vertical-align: top;
 }
 
 /* 버튼그룹 */
