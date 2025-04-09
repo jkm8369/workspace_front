@@ -1,4 +1,9 @@
 @charset "UTF-8";
+/*************************************
+         mysite공통
+*************************************/
+
+
 /* ------------레이아웃 ----------------- */
 body{
     font-family: "맑은 고딕";
@@ -9,34 +14,53 @@ body{
 #wrap{
     width: 1000px;
     margin: 0px auto;
-    border: 1px solid #000000;
 }
 
 #header{
     padding: 10px 0px 10px 0px;
+    border-bottom: 1px solid #000000;
 }
 
 #nav{
     font-weight: bold;
-    border-top: 1px solid rgb(155, 151, 151);
-    border-bottom: 1px solid rgb(155, 151, 151);
+    padding: 10px 0px;
+    border-bottom: 1px solid #000000;
 }
 
+/* 1단 */
 #content{
-    border: 1px solid #000000;
+    padding: 20px 20px 20px 20px;
 }
+
+/* 2단 */
+#content2{
+    padding: 20px 0px;
+}
+
+#content2 #aside{
+    width: 180px;
+    margin-right: 20px;
+    float: left;
+}
+
+#content2 #main{
+    width: 798px;
+    float: left;
+}
+
 
 #footer{
-    border: 1px solid #000000;
+    background: #dddddd;
+    padding: 10px 0px;
 }
 /* -----------/레이아웃------------ */
 
-/* ----------헤더관련--------- */
+/* ----------헤더--------- */
 #header h1{
     font-size: 32px;
+    font-weight: bold;
     margin: 0px 0px 0px 10px;
     color: #79b30b;
-    font-weight: bold;
     float: left;
 }
 
@@ -48,6 +72,7 @@ body{
 #header ul>li{
     float: left;
     margin: 0px 0px 0px 10px;
+    border: 1px solid #000000;
     padding: 3px 5px;
     border-radius: 3px;
     background-color: #e3e3e3;
@@ -55,20 +80,88 @@ body{
 
 
 
-/* ---------/헤더관련----------- */
+/* ---------/헤더----------- */
 
-/*----------네비관련-------------*/
+/*----------네비-------------*/
 #nav ul{
-    font-size: 20px;
-    margin: 10px 0px;
+
 }
 
 #nav ul>li{
+    width: 250px;
     float: left;
-    margin: 0px 80px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
 }
 
-/*------------/네비관련------------*/
+/*------------/네비------------*/
 
-/*---------콘텐츠 관련----------*/
+/*---------컨텐츠(메인)----------*/
 
+
+
+
+
+/*---------/컨텐츠(메인)----------*/
+
+/* ---------컨텐츠2(게시판리스트)------ */
+#content2 #aside h2{
+    width: 180px;
+    height: 60px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #dddddd;
+    text-align: center;
+    line-height: 60px;
+}  
+/*글자 가운데 배치하는 방법은 height랑 line-height를
+맞춰주면 된다(한줄일때만 됨 줄 간격 있으면 안됨) */
+
+#content2 #aside ul>li{
+    margin: 5px 0px 0px 0px;
+    padding: 8px 10px;
+    font-size: 15px;
+    border: 1px solid #a6a6a6;
+}
+
+#main #main-head{
+    padding: 15px 0px 10px 0px;
+    border-bottom: 1px solid #000000;
+}
+
+#main #main-head h3{
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#main #main-head ol{
+    margin-top: 10px;
+    float: right;
+}
+
+#main #main-head ol>li{
+    float: left;
+}
+
+#main #main-head ol>li::after{
+    content: ">";
+    padding: 0px 3px 0px 0px;
+}
+
+#main #main-head ol>li:last-child::after{
+    content: "";
+    padding-right: 0px;
+}
+/* ---------/컨텐츠2(게시판리스트)------ */
+
+
+/* --------------푸터------------- */
+#footer p{
+    text-align: center;
+}
+
+
+
+/* --------------/푸터------------- */
