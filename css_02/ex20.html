@@ -5,6 +5,7 @@
         <meta charset="UTF-8"> <!-- 브라우저가 문서를 해석할때 필요한 정보 -->
         <title>스타일시트</title>
         <link rel="stylesheet" href="./ex20.css">
+        <link rel="stylesheet" href="../mysite/assets/css/reset.css">
     </head>
 
     <body>
@@ -12,7 +13,7 @@
             <!-- h1 사이트명, h2 고객센터 -->
             <h3>일반게시판</h3>
             <!-- 빵부스러기 -->
-            <ol>
+            <ol class="clearfix">
                 <li>홈</li>
                 <li>게시판</li>
                 <li>일반게시판</li>
@@ -66,7 +67,7 @@
                     <span class="form-title">허용범위</span>
                     
                     <lable for="checkbox">댓글허용</lable>
-                    <input id="chc-" type="checkbox" name="allow" value="">
+                    <input id="chceckbox" type="checkbox" name="allow" value="">
                     
                     <lable for="checkbox">답글허용</lable>
                     <input type="checkbox" name="allow" value="">

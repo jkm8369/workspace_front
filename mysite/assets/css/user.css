@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+/* ----------------공통--------------- */
+#main #join{
+    width: 530px;
+    margin-top: 10px;
+    margin-left: 130px;
+    border: 1px solid #000000;
+}
+
+.user-btn{
+    background-color: #e9dcdcc5;
+    padding: 3px 15px;
+    border: 1px solid gray;
+    border-radius: 3px;
+}
+
+/* ----------------/공통--------------- */
+
+/* -------------유저-회원가입-------------------- */
+#main #join .join-box{
+    margin-top: 30px;
+}
+
+#main #join .join-box .form-title{
+    display: inline-block;
+    width: 160px;
+    padding-right: 20px;
+    text-align: right;
+}
+
+#main #join .join-box input[name="txt"]{
+    padding: 2px 0px
+}
+
+#main #join .join-box .btn-re{
+    font-size: 12px;
+}
+
+#main #join .join-box input[type="radio"]{
+    margin-right: 2px;
+}
+
+#main #join .user-btn{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-left: 205px;
+}
+/* -------------/유저-회원가입-------------------- */
+
+/* ---------------유저-회원정보 수정------------------ */
+#main #join .join-box #join-id{
+    margin-left: 123px;
+}
+
+#main #join .join-box #join-id-txt{
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+
+/* ---------------유저-회원정보 수정------------------ */

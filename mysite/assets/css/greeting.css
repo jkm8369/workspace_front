@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+#main #greeting-r{
+    
+}
+
+#main #greeting-r table{
+    width: 800px;
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+
+#main #greeting-r table>tbody>tr>td{
+    
+    padding: 5px 0px;
+    border: 1px solid #000000;
+}
+
+#main #greeting-r table>tbody>tr>td input[type="text"]{
+    width: 350px;
+    margin-left: 3px;
+}
+
+#main #greeting-r table>tbody>tr>td textarea{
+    width: 790px;
+    height: 150px;
+    margin-left: 3px;
+}
+
+
+/* tbody는 넣어주는게 좋다
+프로그램이 인식해서 자동으로 body 넣어버림 */

@@ -3,6 +3,34 @@
 /***********************************
       게시판관련 페이지에서만 사용(리스트, 등록폼, 수정폼, 읽기)
 **********************************/
+/* -----------공통------------ */
+#main ul{
+    margin-top: 5px;
+    float: right;
+}
+#main ul .board-btn{
+    background-color: #e9dcdcc5;
+    margin-left: 10px;
+    padding: 3px 15px;
+    float: left;
+    border: 1px solid gray;
+    border-radius: 3px;
+}
+/* -----------/공통------------ */
+
+/* ----------글쓰기버튼---------- */
+#main .board-btn-a{
+    background-color: #e9dcdcc5;
+    padding: 3px 10px;
+    float: right;
+    border: 1px solid gray;
+    border-radius: 3px;
+}
+
+
+/* ----------/글쓰기버튼---------- */
+
+
 
 /* ---------리스트---------- */
 
@@ -67,7 +95,7 @@ table>tbody>tr{
 /* --------테이블 페이지---------- */
 #main #page ol{
     margin-top: 5px;
-    padding-left: 300px;
+    padding-left: 280px;
 }
 
 #main #page ol>li{
@@ -75,15 +103,122 @@ table>tbody>tr{
     float: left;
 }
 
-/* --------/테이블 페이지---------- */
+#main #page ol>li:first-child::before{
+    content: "◀";
+    margin-right: 10px;
+}
 
-
-/* 글쓰기 버튼 */
-#main #button a{
-    background-color: #e9dcdcc5;
-    border: 1px solid gray;
-    float: right;
-    padding: 3px 4px;    
+#main #page ol>li:last-child::after{
+    content: "▶";
+    margin-left: 10px;
 }
 
 
+/* --------/테이블 페이지---------- */
+
+
+
+
+
+
+/* --------작성자 조회수 작성일 제목---------- */
+#main #info{
+    margin-top: 15px;
+    border-bottom: 1px solid rgb(228, 213, 213);
+}
+
+#main #info .info-l{
+    margin-bottom: 10px;
+}
+
+#main #info .info-l .info-title{
+    margin-right: 10px;
+}
+
+#main #info .info-l .info-txt{
+    font-weight: bold;
+}
+
+#main #info .info-l .info-txt-p{
+    padding-left: 6px;
+}
+
+/* 클래스 여러개 쓸때 ""안에 띄어쓰기로 넣어야함 */
+
+/* --------/작성자 조회수 작성일 제목---------- */
+
+/* --------------여기에는 본문내용----------------- */
+#main #text{
+    margin-top: 5px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(228, 213, 213);  
+}
+
+
+/* --------------/여기에는 본문내용----------------- */
+
+
+
+/* ----------게시판-글쓰기 제목부분--------- */
+#main #writing{
+    margin-top: 20px;
+}
+
+#main #writing #writing-title[type="text"]{
+    width: 740px;
+    height: 20px;
+    margin-left: 25px;
+}
+
+/* ----------/게시판-글쓰기 제목부분--------- */
+
+/* ----------게시판-글쓰기 텍스트창 부분---------- */
+#main textarea{
+    width: 795px;
+    height: 400px;
+    margin-top: 12px;
+}
+
+/* ----------/게시판-글쓰기 텍스트창 부분---------- */
+
+/* ----------게시판-글쓰기 등록 취소 버튼부분------------- */
+
+
+/* ----------/게시판-글쓰기 등록 취소 버튼부분------------- */
+
+
+
+/* -----------게시판-수정 제목 부분----------- */
+#main #info-e{
+    margin-top: 15px;
+    border-bottom: 1px solid rgb(228, 213, 213);
+}
+
+#main #info-e .info-l{
+    margin-bottom: 10px;
+}
+
+#main #info-e .info-l .info-title{
+    margin-right: 10px;
+}
+
+#main #info-e .info-l .info-txt{
+    font-weight: bold;
+}
+
+#info-e #info-editing #info-editing-t[type="text"]{
+    width: 745px;
+    margin-left: 20px;
+    padding: 3px 0px;
+}
+/* -----------/게시판-수정 제목 부분----------- */
+
+
+/* -----------게시판-수정 텍스트창 부분----------------- */
+#main #text-e{
+    
+}
+
+
+/* -----------/게시판-수정 텍스트창 부분----------------- */

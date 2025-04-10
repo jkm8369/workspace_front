@@ -38,6 +38,12 @@ body{
 }
 
 /* 빵부스러기 */
+.wrap ol{
+}
+
+.wrap ol>li{
+    float: left;
+}
 
 
 /* 공통 */
@@ -96,12 +102,3 @@ body{
 
 /* ---------폼에서 쓰이는 애들은 대부분 인라인블럭---------- */
 
-ol{
-    background-color: red;
-    list-style-type: none;
-}
-
-ol>li{
-    border: 1px solid #000000;
-    float: left;
-}
