@@ -5,7 +5,7 @@
             <title>MySite</title>
             <link rel="stylesheet" href="../../assets/css/reset.css">
             <link rel="stylesheet" href="../../assets/css/mysite.css">
-            <link rel="stylesheet" href="../../assets/css/greeting.css">
+            <link rel="stylesheet" href="../../assets/css/guestbook.css">
         </head>
 
         <body>
@@ -57,35 +57,80 @@
                             </ol>
                         </div>
 
-                        <div id="guestbook">
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td>이름</td>
-                                        <td>
-                                            <input type="text">
-                                        </td>
-                                        <td>패스워드</td>
-                                        <td>
-                                            <input type="text">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="4">
-                                            <textarea></textarea>
-                                        </td>   
-                                    </tr> 
-                                    <tr>
-                                        <td colspan="4">
-                                            <button>등록</button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
                         
+                        <table id="guest-table">
+                            <col style="width: 60px;">
+                            <col style="width: 340px;">
+                            <col style="width: 60px;">
+                            <col style="width: 340px;">
 
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <label for="table-name">이름</label>
+                                    </td>
+                                    <td>
+                                        <input id="table-name"" type="text" name="" value="">
+                                    </td>
+                                    <td>패스워드</td>
+                                    <td>
+                                        <input type="text">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4">
+                                        <textarea></textarea>
+                                    </td>   
+                                </tr> 
+                                <tr>
+                                    <td colspan="4">
+                                        <button class="btn">등록</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="guestbook">
+                            <col style="width: 90px;">
+                            <col style="width: 320px;">
+                            <col style="width: 320px;">
+                            <col style="width: 70px;">
+
+                            <tbody>
+                                <tr>
+                                    <td>1234555</td>
+                                    <td>이정재</td>
+                                    <td>2025-04-10 12:12:12</td>
+                                    <td>
+                                        <a href="">[삭제]</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4">방명록 글입니다.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="guestbook">
+                            <col style="width: 90px;">
+                            <col style="width: 320px;">
+                            <col style="width: 320px;">
+                            <col style="width: 70px;">
+
+                            <tbody>
+                                <tr>
+                                    <td>1234555</td>
+                                    <td>이정재</td>
+                                    <td>2025-04-10 12:12:12</td>
+                                    <td>
+                                        <a href="">[삭제]</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4">방명록 글입니다.</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
 
@@ -96,3 +141,11 @@
         </body>
         
     </html>
+                    
+                        
+
+
+                        
+                        
+                    
+

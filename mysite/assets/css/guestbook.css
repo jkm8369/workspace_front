@@ -1,27 +1,25 @@
 @charset "UTF-8";
 
-#main #guestbook{
-    
-}
 
-#main #guestbook table{
+
+#main #guest-table{
     width: 800px;
     margin-top: 10px;
     border-collapse: collapse;
 }
 
-#main #guestbook table>tbody>tr>td{
+#main #guest-table tbody>tr>td{
     
     padding: 5px 0px;
     border: 1px solid #000000;
 }
 
-#main #guestbook table>tbody>tr>td input[type="text"]{
-    width: 330x;
+#main #guest-table tbody>tr>td input[type="text"]{
+    width: 327px;
     margin-left: 3px;
 }
 
-#main #guestbook table>tbody>tr>td textarea{
+#main #guest-table tbody>tr>td textarea{
     width: 790px;
     height: 150px;
     margin-left: 3px;
@@ -30,3 +28,28 @@
 
 /* tbody는 넣어주는게 좋다
 프로그램이 인식해서 자동으로 body 넣어버림 */
+
+
+/* ---------버튼부분----------- */
+#main #guest-table tbody>tr .btn{
+    margin-left: 360px;
+    padding: 2px 20px;
+}
+
+/* ---------/버튼부분----------- */
+
+/* -------------테이블부분----------- */
+#main .guestbook{
+    width: 800px;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.guestbook tbody>tr>td{
+    padding: 10px 5px;
+    border: 1px solid #000000;
+}
+
+
+
+/* -------------/테이블부분----------- */
