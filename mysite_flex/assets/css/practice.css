@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+#wrap{
+    width: 1000px;
+    border: 1px solid #000000;
+    margin: 0px auto;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #000000;
+}
+
+nav{
+    border: 1px solid #000000;
+}
+
+#content{
+    border: 1px solid #000000;
+}
+
+footer{
+    border: 1px solid #000000;
+}
+
+
+
+header h1{
+    font-size: 36px;
+    font-weight: bold;
+    color: #79b30b;
+    border: 1px solid #000000;
+}
+
+header ul{
+    display: flex;
+    flex-direction: row;
+    
+    border: 1px solid #000000;
+}
+
+header ul>li{
+
+}
