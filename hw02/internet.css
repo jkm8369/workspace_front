@@ -104,3 +104,7 @@ a:active{
     color:#00ffff;
     text-decoration: underline;
 }
+
+.no-underline{
+    text-decoration: none;
+}
