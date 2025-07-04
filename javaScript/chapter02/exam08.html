@@ -50,9 +50,58 @@
 		</tbody>
 	</table>
 
+<!-- ------------------------------------------------- -->
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+
+	let personList = [];
+
+	let tag01 = document.querySelector('#h-1');
+
+	let personVO01 = {
+		name: tag01.previousElementSibling.innerText,
+		hp: tag01.innerText,
+		company: tag01.nextElementSibling.innerText,
+		// showInfo: function(){
+		// 	let info = 'name: ' + this.name + ', ' + 'hp: ' + this.hp + ', ' + 'company: ' + this.company
+		// 	return info;
+		// }
+	};
+
+	let personVO02 = {
+		name: tag01.parentElement.nextElementSibling.firstElementChild.innerText,
+		hp: tag01.parentElement.nextElementSibling.firstElementChild.nextElementSibling.innerText,
+		company: tag01.parentElement.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.innerText,
+		// showInfo: function(){
+		// 	let info = 'name: ' + this.name + ', ' + 'hp: ' + this.hp + ', ' + 'company: ' + this.company
+		// 	return info;
+		// }
+	};
+
+	let personVO03= {
+		name: tag01.parentElement.nextElementSibling.nextElementSibling.firstElementChild.innerText,
+		hp: tag01.parentElement.nextElementSibling.nextElementSibling.firstElementChild.nextElementSibling.innerText,
+		company: tag01.parentElement.nextElementSibling.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.innerText,
+		// showInfo: function(){
+		// 	let info = 'name: ' + this.name + ', ' + 'hp: ' + this.hp + ', ' + 'company: ' + this.company
+		// 	return info;
+		// }
+	};
+
+	personList.push(personVO01);
+	personList.push(personVO02);
+	personList.push(personVO03);
+
+	console.log(personList);
+
+
+});
+
+
+</script>
+
 </body>
 
-<script>
-</script>
+
 
 </html>

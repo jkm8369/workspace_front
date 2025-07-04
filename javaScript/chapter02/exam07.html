@@ -49,10 +49,86 @@
 			</tr>
 		</tbody>
 	</table>
+<!-- ------------------------------------------------------- -->
+<script>
+//돔트리가 완성되었을             때
+document.addEventListener('DOMContentLoaded', function(){
+	console.log('돔트리 완료');
+
+	let tag01 = document.querySelector('h1');
+	console.log(tag01);
+	console.log(tag01.parentElement);
+	console.log(tag01.parentElement.parentElement);
+	
+	//class="red"의 부모의 id값을 출력하세요
+	let tag02 = document.querySelector('.red');
+	console.log(tag02);
+	console.log(tag02.parentElement.id);
+
+	console.log('-------------------------------------------------');
+	//id="n-3"
+	/*
+	let tag03 = document.querySelector('#n-3');
+	console.log(tag03);
+	console.log(tag03.parentElement);
+	*/
+	let tag03 = document.querySelector('#n-3').parentElement;
+	console.log(tag03);
+
+	//이효리 핸드폰 td
+    //#n-2 위치일때  본인의 tr의 id값 출력
+   	let tag04 = document.querySelector('#n-2');
+	console.log(tag04);
+	console.log(tag04.id);
+
+    //#n-2 위치일때  이효리 이름출력   
+	console.log(tag04.firstElementChild.innerText);
+
+    //#n-2 위치일때  이효리 회사번호
+	console.log(tag04.lastElementChild.innerText);
+
+	/////////////////////////////////////////////////////////////
+    //#h-2 위치일때
+	//h-2
+	let tag05 = document.querySelector('#h-2');
+
+	//#h-2 위치일때  정우성 회사번호   
+	console.log(tag05.parentElement.parentElement.firstElementChild.lastElementChild.innerText);
+
+	//--1. 부모로 이동
+	console.log(tag05.parentElement);
+
+	//--2. 부모의 이전형제를 찾는다
+	console.log(tag05.parentElement.previousElementSibling);
+
+	//--3. 마지막 자식을 찾는다
+	console.log(tag05.parentElement.previousElementSibling.lastElementChild);
+
+	//--4. 텍스트 값을 가져온다
+	console.log(tag05.parentElement.previousElementSibling.lastElementChild.innerText);
+
+	//h-2 위치일때 박명수 이름 출력
+	console.log(tag05.parentElement.nextElementSibling.firstElementChild.innerText);
+	//console.log(tag05.parentElement.parentElement.lastElementChild.firstElementChild.innerText);
+
+
+
+
+
+
+    //#n-2 위치일때  박명수 이름출력
+
+	
+	
+
+	
+});
+
+</script>
+
 
 </body>
 
-<script>
-</script>
+
 
 </html>

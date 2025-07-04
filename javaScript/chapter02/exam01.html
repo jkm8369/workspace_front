@@ -18,11 +18,44 @@
 		<li id="first"> 텍스트1-1 텍스트1-1 텍스트1-1 텍스트1-1 텍스트1-1 </li>
 	</ul>
 
+<!-- ------------------------------------------------- -->
+<script>
+
+//돔트리 완료되었을 때
+//html은 document에서 관리 --> html 초벌구이가 완료 되었을때
+document.addEventListener('DOMContentLoaded', function(){
+	console.log('돔트리 완료 -- 페이징되기전');
+
+	//id="second"를 빨강색
+	let secondTag = document.getElementById('second');
+	secondTag.style.color = '#ff0000';
+
+	//id="third"를 파란색
+	let thirdTag = document.getElementById('third');
+	thirdTag.style.color = '#0000ff';
+
+	//id="fourth"를 초록색
+	let fourthTag = document.getElementById('fourth');
+	fourthTag.style.color = '#00ff00';
+	
+	//id="first"를 분홍색    !!!동일한 id가 존재 --> 맨위에 있는 1개만 적용
+	let firstTag = document.getElementById('first');
+	firstTag.style.color = '#ff00ff';
+
+});
+
+//페인팅까지 완료되었을 때
+window.addEventListener('load', function() {
+	console.log('페인팅까지 완료');
+});
+
+
+
+</script>
+
 
 </body>
 
-<script>
 
-</script>
 
 </html>

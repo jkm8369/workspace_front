@@ -17,11 +17,47 @@
 
 	<p id="p01">문장1</p>
 	<p id="p02">문장2</p>
-</body>
-
+<!-- ------------------------------------------------------- -->
 <script>
+//돔트리가 완료 되었을 때 !!!!!!!!!!!!!!!!!
+document.addEventListener('DOMContentLoaded', function(){
+	console.log('돔트리 완료');
+
+	//id="txt-userId"  => id="t-id"
+	let tag01 = document.querySelector('#txt-userId');
+	console.log(tag01);
+	tag01.id = 't-id';
+	tag01.className = 'f-txt';	//클래스명 f-txt
+	tag01.type = 'password';	//type = 'password';
+	tag01.value = '정우성';		//value = '정우성';
+
+	tag01.tagName='DIV';
+
+	console.log(tag01.id);
+	console.log(tag01.className);
+	console.log(tag01.type);
+	console.log(tag01.value);
+	console.log(tag01.tagName);     //태그네임은 변경되지 않는다
+	
+
+	//실습
+	let tag02 = document.querySelector('a');
+	tag02.href = "https://www.google.co.kr";
+	tag02.innerText = '구글';
+	tag02.target = "_self"
+
+	console.log(tag02);
+	
+
+
+});
+
 
 
 </script>
+
+</body>
+
+
 
 </html>
