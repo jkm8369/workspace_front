@@ -52,48 +52,46 @@
 
 <!-- ------------------------------------------------- -->
 <script>
+//돔트리가 완성되었을 때
 document.addEventListener('DOMContentLoaded', function(){
 
 	let personList = [];
 
-	let tag01 = document.querySelector('#h-1');
+	let trTags = document.querySelectorAll('tbody>tr');
+	
+	/*
+	console.log(trTags);
+	console.log(trTags[0].children[0]);
+	console.log(trTags[0].children[0].innerText);
+	*/
 
-	let personVO01 = {
-		name: tag01.previousElementSibling.innerText,
-		hp: tag01.innerText,
-		company: tag01.nextElementSibling.innerText,
-		// showInfo: function(){
-		// 	let info = 'name: ' + this.name + ', ' + 'hp: ' + this.hp + ', ' + 'company: ' + this.company
-		// 	return info;
-		// }
+	//tr의 갯수만큼 반복문
+	for(let i=0; i<trTags.length; i++) {
+
+		
+		//데이터 추출
+		let name = trTags[i].children[0].innerText;
+		let hp = trTags[i].children[1].innerText;
+		let company = trTags[i].children[2].innerText;
+
+		//객체 생성(VO로 묶는다)
+		let personVO = {
+			name: name, 
+			hp: hp, 
+			company: company
+		}
+
+		//객체(VO)를 배열에 추가한다
+		personList.push(personVO);
+
+		
+	
 	};
 
-	let personVO02 = {
-		name: tag01.parentElement.nextElementSibling.firstElementChild.innerText,
-		hp: tag01.parentElement.nextElementSibling.firstElementChild.nextElementSibling.innerText,
-		company: tag01.parentElement.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.innerText,
-		// showInfo: function(){
-		// 	let info = 'name: ' + this.name + ', ' + 'hp: ' + this.hp + ', ' + 'company: ' + this.company
-		// 	return info;
-		// }
-	};
-
-	let personVO03= {
-		name: tag01.parentElement.nextElementSibling.nextElementSibling.firstElementChild.innerText,
-		hp: tag01.parentElement.nextElementSibling.nextElementSibling.firstElementChild.nextElementSibling.innerText,
-		company: tag01.parentElement.nextElementSibling.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.innerText,
-		// showInfo: function(){
-		// 	let info = 'name: ' + this.name + ', ' + 'hp: ' + this.hp + ', ' + 'company: ' + this.company
-		// 	return info;
-		// }
-	};
-
-	personList.push(personVO01);
-	personList.push(personVO02);
-	personList.push(personVO03);
-
-	console.log(personList);
-
+	for(let i=0; i<personList.length; i++) {
+		console.log('name = ' + personList[i].name + ' hp = ' + personList[i].hp + ' company = ' + personList[i].company);
+	}
+	
 
 });
 

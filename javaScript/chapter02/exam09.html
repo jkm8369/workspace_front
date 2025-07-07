@@ -16,12 +16,50 @@
 		<li>다섯번째아이템입니다.</li>
 		<li>여섯번째아이템입니다.</li>
 	</ul>
+
+	<p id="p01" style="color: #0000ff;">안녕하세요</p>
 	
+<!-- ------------------------------------------------------- -->
+<script>
+
+//돔트리가 완료 되었을 때
+document.addEventListener('DOMContentLoaded', function(){
+	console.log('완료');
+
+	//html을 가져온다
+	let ulTag = document.querySelector('ul');
+	
+	//css 적용한다
+	ulTag.style.fontSize = '40px';							 //폰트사이즈
+	ulTag.style.border = '1px solid #ff0000'; 				//선
+	ulTag.firstElementChild.style.fontFamily = '궁서';  	  //글꼴
+	ulTag.children[0].style.backgroundColor = '#d6d6d6';  	 //배경색
+	ulTag.children[0].style.width = '400px';				 //너비
+	ulTag.children[0].style.padding = '10px 20px 30px 40px'; //패딩
+	ulTag.children[0].style.margin = '40px';				 //마진
+
+	ulTag.lastElementChild.style.borderWidth = '5px';		//선 두께
+	ulTag.lastElementChild.style.borderStyle = 'dotted';	//선 모양
+	ulTag.lastElementChild.style.borderColor = '#ff0000';	//선 색깔
+
+	ulTag.style.listStyleType = 'none';		//리스트에 블릿 안보이게
+
+	//p01을 빨간색으로 변경
+	/*
+	let p01Tag = document.querySelector('#p01');
+	console.log(p01Tag);
+	p01Tag.style.color = '#ff0000';
+	*/
+
+	document.querySelector('#p01').style.color = '#ff0000';
+
+});
+
+
+</script>
 
 </body>
 
-<script>
 
-</script>
 
 </html>

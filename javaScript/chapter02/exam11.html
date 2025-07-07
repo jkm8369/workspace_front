@@ -60,11 +60,36 @@
 	<p id="p13">문장1</p>
 	<p id="p14">문장2</p>
 
+<script>
+//돔트리가 완료 되었을 때
+document.addEventListener('DOMContentLoaded', function(){
+	console.log('완료');
 
+	let p11Tag = document.querySelector('#p11');
+	console.log(p11Tag);
+	console.log(p11Tag.innerHTML);
+	console.log(p11Tag.textContent);
+	//console.log(p11Tag.innerText);    //innerText(x) --> textContent(o)
+
+	//#p13 태그에 텍스트를 --> "<strong>가나다마라바사아자차카타파하</strong>"
+	//<p id="p13">문장1</p>
+	//<p id="p13"><strong>가나다라마바사아자차카타파하</strong></p>
+	let p13Tag = document.querySelector('#p13');
+	p13Tag.textContent = '<strong>가나다라마바사아자차카타파하</strong>';  //html 글자로 출력
+
+	let p14Tag = document.querySelector('#p14');
+	p14Tag.innerHTML = '<strong>가나다라마바사아자차카타파하</strong>';  //html 반영
+
+	//요소의 값(content --> 글자)을 없애는 법
+	let p1Tag = document.querySelector('#p1');
+	console.log(p1Tag);
+	p1Tag.textContent = '';
+
+
+});
+</script>
 
 </body>
 
-<script>
-</script>
 
 </html>

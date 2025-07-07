@@ -42,12 +42,49 @@
     </table>
     <br>
 
-</body>
-
 <script>
+//돔트리를 완료했을 때
+document.addEventListener('DOMContentLoaded', function(){
+    console.log('돔트리 완료');
 
+    let btn = document.querySelector('#btnMakeNo');
+    btn.addEventListener('click', function(){
+        console.log('버튼 작동');
+        let lottoNoList = [];
+
+
+        let trTags = document.querySelectorAll('tbody>tr:first-child>td');
+
+        //console.log(trTags);
+
+        for(let i=0; i<trTags.length; i++) {
+
+            let randomNo = Math.floor(Math.random() * 45) + 1;
+
+            lottoNoList.push(randomNo);
+            
+        }
+        
+        console.log(lottoNoList);
+
+        for(let i=0; i<trTags.length; i++) {
+            trTags[i].textContent = lottoNoList[i];
+        }
+
+        
+
+        
+
+
+    });
+
+
+});
 
 
 </script>
+</body>
+
+
 
 </html>

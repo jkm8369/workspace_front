@@ -28,10 +28,54 @@
 	</div>
 	<br>
 
-</body>
-
 <script>
+document.addEventListener('DOMContentLoaded', function(){
 
+	console.log('돔트리 완료');
+
+	document.querySelector('#btnWrite');
+
+	btnWrite.addEventListener('click', function(){
+		console.log('버튼등록');
+
+		let name = document.querySelector('input[name="name"]').value;
+		let pw = document.querySelector('input[name="pw"]').value;
+		let content = document.querySelector('textarea[name="content"]').value;
+		
+		// let name = nameTag.value;
+		// let pw = pwTag.value;
+		// let content = contentTag.value;
+
+		let guestbookVO = {
+			name: name,
+			pw: pw,
+			content: content
+		};
+		
+		
+
+		// let name = trTags[0].children[0].textContent;
+		
+		// let password = trTags[0].children[1].textContent;
+
+		// let content = trTags[1].children[0].textContent;
+
+		
+
+		console.log(guestbookVO);
+		console.log('이름:' + guestbookVO.name + ' 비밀번호:' + pw + ' 내용:' + content);
+
+		name.value = "";
+		pw.value = "";
+		content.value = "";
+		
+
+
+	});
+
+
+
+});
 
 
 
@@ -42,5 +86,9 @@
 
 
 </script>
+
+</body>
+
+
 
 </html>
