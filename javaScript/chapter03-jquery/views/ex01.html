@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>Insert title here</title>
+<!-- css -->
+<!-- js -->
+ <script src="../assets/js/jquery-3.7.1.js"></script>
+</head>
+<body>
+	
+	<!--태그-->
+	<h1>JavaScript</h1>
+	<ul>
+		<li> 순서1 순서1 순서1 순서1 순서1 </li>
+		<li> 순서2 순서2 순서2 순서2 순서2 </li>
+		<li> 순서3 순서3 순서3 순서3 순서3 </li>
+		<li> 순서4 순서4 순서4 순서4 순서4 </li>
+	</ul>
+	
+	<p> 텍스트1 텍스트1 텍스트1 텍스트1 텍스트1 </p>
+	<p> 텍스트2 텍스트2 텍스트2 텍스트2 텍스트2 </p>
+	<p> 텍스트3 텍스트3 텍스트3 텍스트3 텍스트3 </p>
+	<p> 텍스트4 텍스트4 텍스트4 텍스트4 텍스트4 </p>
+<!-- --------------------------------------------------------------------------- -->
+<script>
+/*
+//돔트리 완료 js
+document.addEventListener('DOMContentLoaded', function(){
+	console.log('돔트리 완료');
+
+	let liTags = document.querySelectorAll('li');
+	console.log(liTags);
+
+	for(let i=0; i<liTags.length; i++) {
+		liTags[i].style.color = '#ff0000';
+	}
+
+});
+*/
+
+//jquery
+//돔트리 완료 되었을 때
+$(document).ready(function(){
+	console.log('돔트리 완료 jquery');
+
+	//li요소를 빨간색
+	let liTags = $('li');
+	console.log(liTags);
+	liTags.css('color', '#ff0000');
+
+	/*
+	//p요소를 파란색
+	let pTags = $('p');
+	pTags.css('color', '#0000ff');
+	*/
+
+	$('p').css('color', '#ff00ff');
+
+
+});
+
+</script>
+</body>
+
+</html>
