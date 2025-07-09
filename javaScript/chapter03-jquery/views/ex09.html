@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 
 <title>Insert title here</title>
+<script src="../assets/js/jquery-3.7.1.js"></script>
 </head>
 
 <body>
@@ -17,6 +18,16 @@
 		<li>다섯번째 아이템입니다.</li>
 	</ul>
 
+<script>
+$(document).ready(function(){
+	console.log('돔트리 완료');
+
+	console.log($('.del'));
+	//$('.del').html('');
+	$('.del').empty();
+
+});
+</script>	
 </body>
 
 

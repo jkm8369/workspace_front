@@ -5,6 +5,7 @@
 
 
 <title>Insert title here</title>
+<script src="../assets/js/jquery-3.7.1.js"></script>
 </head>
 <body>
 	
@@ -16,6 +17,80 @@
 		<li data-bno="4" data-pno="3"><strong>네번째 아이템입니다.</strong></li>
 	</ul>
 	<button>버튼</button>
+
+<script>
+$(document).ready(function(){
+	console.log('돔트리 완료');
+
+	
+	//js
+	let fiTag2 = document.querySelector('#first');
+	console.log(fiTag2);
+	console.log(fiTag2.className);
+	
+	//클릭한 li 요소의 컨텐츠(글자)를 변경하세요
+	//방법1
+	//jquery 속성 값 가져오기
+	let fiTag = $('#first');
+	console.log($('#first').attr('class'));
+	console.log($('#first').attr('id'));
+	
+	//첫번째 li에 이벤트 등록
+	fiTag.on('click', function(){
+		console.log('클릭');
+
+		console.log(this);
+
+
+	});
+	console.log('-----------------------------------------');
+	//li 태그를 클릭했을 때
+	
+	
+
+	
+
+	//li를 클릭했을 때
+	$('li').on('click', function(){
+		console.log('li클릭');   //이벤트 등록 확인용
+
+
+		//li 요소중에 이번에 클릭된 특정 li를 정확하게 알려준다
+		let $this = $(this);   //this는 예약어라 변수 이름 불가
+		console.log($this);
+
+		//id 출력
+		console.log($this.attr('id'));
+
+		//className 출력
+		console.log($this.attr('class'));
+
+		//$this의 내용을 변경해준다
+		$(this).text('변경된 문구');
+
+		//data 값 가져오기
+		let bno = $this.data('bno');
+		let pno = $this.data('pno');
+		console.log($this.data('bno'));
+		console.log($this.data('pno'));
+
+		//vo
+		let pVO = {
+			bno: bno,
+			pno: pno
+		};
+
+		console.log(pVO);
+
+	});
+
+	
+	//this   이벤트 가지고 있는 애
+	//event.target   클릭한 애
+
+
+});
+</script>
 </body>
 
 

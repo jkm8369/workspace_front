@@ -4,21 +4,22 @@
 <meta charset="UTF-8">
 
 <title>Insert title here</title>
+<!-- css -->
+<style>
+	ul {
+		background-color: blue; 
+		padding: 20px;
+	}
+	
+	li {
+		background-color: gray;
+		border: 1px solid black; 
+	}
+	
+	
+</style>
 
-	<style>
-		ul {
-			background-color: blue; 
-			padding: 20px;
-		}
-		
-		li {
-			background-color: gray;
-			border: 1px solid black; 
-		}
-		
-		
-	</style>
-
+<script src="../assets/js/jquery-3.7.1.js"></script>
 
 </head>
 <body>
@@ -33,9 +34,116 @@
 	<button id="btn" type="button">li요소추가</button>
 	<br>
 	<br>
-	<button id="datBtn" type="button">전체데이터수집</button>
+	<button id="btnData" type="button">전체데이터수집</button>
 	
-	
+<script>
+$(document).ready(function(){
+	console.log('돔트리 준비 완료');
+
+	//<li data-bno="4" data-pname="박명수"><strong>네번째 아이템입니다.</strong></li>
+	//li요소 추가 버튼을 클릭했을때
+	let tag = $('#btn');
+	console.log(tag);
+
+	$('#btn').on('click', function(){
+		console.log('클릭');
+
+		let str = '';
+		str += '<li data-bno="5" data-pname="이효리"><strong>다섯번째 아이템입니다.</strong></li>';
+		str += '<li data-bno="6" data-pname="윤종신"><strong>여섯번째 아이템입니다.</strong></li>';
+		str += '<li data-bno="7" data-pname="김구라"><strong>일곱번째 아이템입니다.</strong></li>';
+
+		$('ul').append(str);
+
+	});
+
+	/*
+	//li태그(요소)를 클릭했을 때
+	$('li').on('click', function(){
+		console.log('li 클릭');
+
+		let $this = $(this);
+		console.log(($this).text());
+
+	});
+	*/
+
+	//ul태그 (요소)를 클릭했을 때
+	$('ul').on('click', 'li' ,function(event){
+		console.log('ul태그 클릭');
+
+		//console.log(event.target);
+		let $this = $(this);
+		console.log($this.text());
+
+	});
+
+	//전체데이터수집 버튼 클릭
+	$('#btnData').on('click', function(){
+		console.log('전체데이터수집버튼 클릭');
+		//리스트 만들기
+		let personList = [];
+
+		//데이터 수집하기 --> 묶기 --> 리스트 추가
+		let liTags = $('ul>li');
+		console.log(liTags);
+
+		/*
+		//js 반복문 사용
+		for(let i=0; i<liTags.length; i++) {
+			let name = $(liTags[i]).data('pname');
+			console.log(name);
+			
+		}
+		*/
+
+		//jquery 반복문 사용
+		liTags.each(function(index, item){
+			//console.log(index);
+			//console.log(item);
+
+			
+
+			//item은 자바스크립트 변수 data()를 가지고 있지 않다
+			//item 자바스크립트 변수를 jquery용으로 변형시킨다  data()는 jquery용으로 js에는 없는 함수
+			let bno = $(item).data('bno');
+			let pname = $(item).data('pname');
+			
+			let personVO = {
+				bno: bno,
+				pname: pname
+			};
+
+			//console.log(personVO);
+			personList.push(personVO);
+
+			/*
+			let $this = $(this);
+
+			let bno = $this.data('bno');
+			let pname = $this.data('pname');
+			
+			console.log(bno);
+			console.log(pname);
+			*/
+
+		});
+
+		console.log(personList);
+
+		
+		
+
+		
+
+
+
+	});
+
+
+
+});
+</script>
 	
 </body>
 

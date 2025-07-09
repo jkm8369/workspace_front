@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 
-
+<title>Insert title here</title>
+<!-- css -->
 <style>
 	.red {color: red;}
 	
@@ -11,8 +12,7 @@
 
 </style>
 
-
-<title>Insert title here</title>
+<script src="../assets/js/jquery-3.7.1.js"></script>
 </head>
 
 <body>
@@ -27,7 +27,29 @@
 	이름2:<input type="text" name="name2" value="홍길동"><br>
 	비밀번호2:<input type="password" name="password2" value="1234"><br>
 	<textarea name="content2">산토끼토끼야</textarea>
+<script>
+$(document).ready(function(){
+	console.log('돔트리 완료');
+
+	//console.log($('[name="name"]'));
+	//이름
+	$('[name="name"]').val('정우성');
+
+	//비밀번호
+	$('[name="password"]').val('1234');
+
+	//컨텐츠
+	$('[name="content"]').val('학교 종이 땡땡땡');
+	//console.log($('[name="content"]'));
+
+	////////////////////////////////////////////////////
+	//태그 잡아오기
+	console.log($('[name="name2"]').val());
+	console.log($('[name="password2"]').val());
+	console.log($('[name="content2"]').val());
 	
+});
+</script>
 </body>
 
 

@@ -5,6 +5,7 @@
 
 
 <title>Insert title here</title>
+<script src="../assets/js/jquery-3.7.1.js"></script>
 </head>
 
 <body>
@@ -12,6 +13,27 @@
 	<!--html()-->
 	<p id="p1"> abcdefghijklmn </p>
 	<p id="p2"> 학교종이 땡땡땡<br> abcdefg </p>
+
+<script>
+$(document).ready(function(){
+	console.log('돔트리 완료');
+
+	let str = '<strong>가나다라마바사아자차카타파하</strong>';
+	
+	let p1Tag = $('#p1');
+	console.log(p1Tag);
+
+	p1Tag.html(str);
+	console.log($('#p1').text("<strong>가나다라마바사아자차카타라하</strong>"));
+	
+
+	console.log($('#p2').html());
+	console.log($('#p2').text());
+
+	
+
+});
+</script>
 </body>
 
 
