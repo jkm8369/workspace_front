@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+
+    <script src="../assets/js/jquery-3.7.1.js"></script>
+
+
+</head>
+
+<body>
+
+    <table border="1" width="600px">
+
+        <tbody>
+            <colgroup>
+                <col style="width: 100px;">
+                <col style="width: 100px;">
+                <col style="width: 100px;">
+                <col style="width: 100px;">
+                <col style="width: 100px;">
+                <col style="width: 100px;">
+            </colgroup>
+            <tr>
+                <td>?</td>
+                <td>?</td>
+                <td>?</td>
+                <td>?</td>
+                <td>?</td>
+                <td>?</td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                    <button id="btnMakeNo" type="button">등록</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+
+<script>
+$(document).ready(function(){
+    console.log('돔트리 완료');
+
+    let lottoNoList = [];
+
+    $('#btnMakeNo').on('click', function(){
+        console.log('버튼');
+
+        //console.log($('tbody>tr:first-child>td'));
+        let tdTags = $('tbody>tr:first-child>td');
+
+        while(true) {
+            if(lottoNoList.length >=6) {
+                break;
+            }
+
+            let randomNo = Math.floor(Math.random() * 45) + 1;
+            if(!lottoNoList.includes(randomNo)) {
+                lottoNoList.push(randomNo);
+            }
+
+
+        }
+
+
+
+
+
+    });
+
+
+});
+</script>
+</body>
+
+
+
+</html>
